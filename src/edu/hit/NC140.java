@@ -1,3 +1,9 @@
+package edu.hit;
+
+/**
+ * 快排
+ * https://www.nowcoder.com/practice/2baf799ea0594abd974d37139de27896?tpId=117&tqId=37851&companyId=665&rp=1&ru=%2Fcompany%2Fhome%2Fcode%2F665&qru=%2Fta%2Fjob-code-high%2Fquestion-ranking&tab=answerKey
+ */
 public class NC140 {
     public int[] MySort(int[] arr) {
         QuickSort(arr,0,arr.length - 1);
