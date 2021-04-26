@@ -1,5 +1,7 @@
 package edu.hit;
 
+import java.util.concurrent.locks.Condition;
+
 /**
  * 最长公共子序列
  *
@@ -48,4 +50,5 @@ public class NC92 {
         NC92 nc92 = new NC92();
         System.out.println(nc92.LCS("1A2C3D4B56", "B1D23CA45B6A"));
     }
+    
 }
