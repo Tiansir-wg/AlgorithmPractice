@@ -12,18 +12,22 @@ public class NC130 {
         int sum = 0;
         if(arr == null || arr.length == 0) return sum;
         int len = arr.length;
+        // 初始所有人分一颗糖
         int[] candies = new int[len];
         Arrays.fill(candies, 1);
+        // 从左向右遍历, 右边的人得分比左边人高，右边人糖果数比左边人多一颗
         for(int i = 1;i < len;i++){
             if(arr[i] > arr[i - 1]){
                 candies[i] = candies[i - 1] + 1;
             }
         }
+        // 从右向左遍历, 左边的人得分比右边人高，左边人糖果数比右边人多一颗
         for(int i = len - 1;i > 0;i--){
             if(arr[i - 1] > arr[i]){
                 candies[i - 1] = Math.max(candies[i - 1], candies[i] + 1);
             }
         }
+
         for(int i = 0;i < len;i++){
             sum += candies[i];
         }
